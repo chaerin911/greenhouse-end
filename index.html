@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>지구 끝의 온실</title>
+	<style>
+		@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+		.notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+
+		@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@600&display=swap');
+
+
+
+		html{font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; scroll-behavior: smooth; letter-spacing: -1px;}
+		body,p,div,ul,li{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; line-height: 1.6; letter-spacing: -1px;}
+		h1{margin: 0; padding: 0; font-family: 'Lexend Zetta', sans-serif;; font-size: 3em; letter-spacing: -3px;}
+		h2{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; font-size: 2em; line-height: 1.4; letter-spacing: -3px;}
+		h3{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; font-size: 4em; line-height: 1.3; letter-spacing: -3px;}
+
+		.top-1 {display: grid;grid-template-columns: 1fr; grid-template-rows: auto;grid-column-gap: 0px;grid-row-gap: 0px;}
+
+		.top-2 {display: grid; grid-template-columns: 1fr 0.8fr;grid-template-rows: 0.5fr;grid-column-gap: 40px; grid-row-gap: 0px;}
+			
+			.top2-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top2-2 { grid-area: 1 / 2 / 2 / 3; }
+
+
+		.top-3 {display: grid;grid-template-columns: 0.6fr 1fr 0.1fr;grid-template-rows: 0.5fr 0.3fr;grid-column-gap: 0px;grid-row-gap: 0px;}
+
+			.top3-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top3-2 { grid-area: 2 / 1 / 3 / 2; }
+			.top3-3 { grid-area: 1 / 2 / 3 / 3; }
+			.top3-4 { grid-area: 1 / 3 / 3 / 4; }
+
+		.top-4 {display: grid;grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr 0.2fr;grid-template-rows: 1fr ;grid-column-gap: 40px;grid-row-gap: 0px;}
+
+			.top4-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top4-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top4-3 { grid-area: 1 / 3 / 2 / 4; }
+			.top4-4 { grid-area: 1 / 4 / 2 / 5; }
+			.top4-5 { grid-area: 1 / 5 / 2 / 6; }
+
+
+		.top-5 {display: grid;grid-template-columns: 0.1fr 1fr 0.6fr;grid-template-rows: 0.5fr 0.3fr;grid-column-gap: 0px;grid-row-gap: 0px;}
+
+			.top5-1 { grid-area: 1 / 1 / 3 / 2; }
+			.top5-2 { grid-area: 1 / 2 / 3 / 3; }
+			.top5-3 { grid-area: 1 / 3 / 2 / 4; }
+			.top5-4 { grid-area: 2 / 3 / 3 / 4; }
+
+		.top-6 {display: grid;grid-template-columns: 0.2fr 0.8fr 0.8fr 0.8fr 1fr;grid-template-rows: 1fr ;grid-column-gap: 40px;grid-row-gap: 0px;}
+
+		.top-7 {display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 0.5fr ;grid-column-gap: 250px;grid-row-gap: 0px;}
+
+			.top7-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top7-2 { grid-area: 1 / 2 / 2 / 3; }
+
+		.top-8 {display: grid;grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;grid-template-rows: 1fr ;grid-column-gap: 50px;grid-row-gap: 0px;}
+
+			.top8-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top8-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top8-3 { grid-area: 1 / 3 / 2 / 4; }
+			.top8-4 { grid-area: 1 / 4 / 2 / 5; }
+			.top8-5 { grid-area: 1 / 5 / 2 / 6; }
+
+
+		.top-9 {display: grid;grid-template-columns: 1fr 0.8fr 0.5fr 0.8fr 1fr ;grid-template-rows: 1fr ;grid-column-gap: 50px;grid-row-gap: 0px;}
+
+			.top9-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top9-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top9-3 { grid-area: 1 / 3 / 2 / 4; }
+			.top9-4 { grid-area: 1 / 4 / 2 / 5; }
+			.top9-5 { grid-area: 1 / 5 / 2 / 6; }	
+
+		.top-10 {display: grid;grid-template-columns: 0.2fr 1fr 0.2fr ;grid-template-rows: 1fr ;grid-column-gap: 50px;grid-row-gap: 0px;}
+
+			.top10-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top10-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top10-3 { grid-area: 1 / 3 / 2 / 4; }
+
+		.top-11 {display: grid;grid-template-columns: 0.5fr 1fr 0.5fr ;grid-template-rows: 1fr ;grid-column-gap: 50px;grid-row-gap: 0px;}
+
+			.top11-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top11-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top11-3 { grid-area: 1 / 3 / 2 / 4; }
+
+		.top-12 {display: grid;grid-template-columns: 0.5fr 1fr 1fr 0.5fr; grid-template-rows: 1fr ;grid-column-gap: 100px;grid-row-gap: 0px;}
+
+			.top12-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top12-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top12-3 { grid-area: 1 / 3 / 2 / 4; }
+			.top12-4 { grid-area: 1 / 4 / 2 / 5; }
+
+
+		.top-13 {display: grid;grid-template-columns: 1fr 1fr 3.5fr; grid-template-rows: 0.3fr ;grid-column-gap: 30px;grid-row-gap: 0px;}
+
+			.top13-1 { grid-area: 1 / 1 / 2 / 2; }
+			.top13-2 { grid-area: 1 / 2 / 2 / 3; }
+			.top13-3 { grid-area: 1 / 3 / 2 / 4 }
+
+
+		.hero{position: relative; display: flex; padding-right: 5%; padding-left: 5%;justify-content: center; align-items: center;}
+		.hero2{position: relative; padding-right: 5%; padding-left: 5%;justify-content: center; align-items: center;}
+		.hero3{position: relative; padding-right: 5%; padding-left: 5%;}
+		.re{position: relative;}
+		.ab{position: absolute;}
+		.mid{top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+		.b-black{background: black;}
+		.b-white{background: white;}
+		.w-white{color: white;}
+		.w-black{color: black;}
+		.flex{display: flex;}
+
+		.bg-world {background-image: url('world.png'); background-size: 90%; background-attachment: scroll; background-position: center; background-repeat: no-repeat;}
+		.bg-half {background-image: url('bg.svg'); background-size: cover; background-attachment: fixed; background-position: center;}
+		.bg-grid {background-image: url('grid.svg'); background-size: 90%; background-attachment:scroll; background-position: center; background-repeat: no-repeat;}
+		.bg-gr {background-image: url('gr.svg'); background-size: cover; background-attachment: fixed; background-position: center;}
+		.bg-map1 {background-image: url('map1.png'); background-size: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat;}
+		.bg-map2 {background-image: url('map2.png'); background-size: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat;}
+
+		.book{z-index: 3;}
+
+
+		.button {background: #fff;border: none;padding: 2px;cursor: pointer;display: block;position: relative;overflow: hidden;transition: all .20s ease-in-out .20s; margin: 0 auto; text-align: center;}
+		.button-wrapper {display: inline-block;	margin: 20px 5px;}
+			span {display: block;padding: 15px 30px;background: #fff;z-index: 100;position: relative;transition: all .35s ease-in-out .35s;}
+		.button:hover span {background: #DD4599;color: #fff;transition: all .20s ease-in-out .20s;}
+		.button:after {bottom: -100%;right: -100%;content: "";width: 100%;height: 100%;position: absolute;background: #DD4599;transition: all .20s ease-in-out .3s;}
+		.button:hover:after {right: 0;bottom: 0;transition: all ease-in-out .20s;}
+		.button:before {top: -100%;left: -100%;content: "";width: 100%;height: 100%;position: absolute;background: #DD4599;transition: all .35s ease-in-out .3s;}
+		.button:hover:before {	left: 0;top: 0;transition: all ease-in-out .20s;}
+
+
+
+		.box{display: inline-block; height: 300px; width: 33.3%;float:left; position: relative;transition: all .2s ease;}
+
+		.loader5{position: relative; width: 200px; height: 25px; top: 45%; top: -webkit-calc(50% - 10px); top: calc(50% - 10px); left: 25%;left: -webkit-calc(50% - 75px); left: calc(50% - 75px); background-color: #D3E0F0;}
+
+		.loader5:after{content: "...LOADING ...";color: #fff; font-family: 'Lexend Zetta', sans-serif ;font-weight: 500; font-size: 16px; position: absolute; width: 100%;height: 25px; line-height: 20px;left: 0;top: 0;}
+
+		.loader5:before{content: "";position: absolute;background-color: #DD4599;top: 0px;height: 25px;width: 0px;z-index: 0;-webkit-transform-origin:  100% 0%;transform-origin:  100% 0% ;-webkit-animation: loader5 7s ease-in-out infinite;animation: loader5 7s ease-in-out infinite;}
+
+		@-webkit-keyframes loader5{0%{width: 0px; left: 0px} 48%{width: 100%; left: 0px}50%{width: 100%; right: 0px}52%{width: 100%; right: 0px}100%{width: 0px; right: 0px}}
+
+		@keyframes loader5{0%{width: 0px; left: 0px}48%{width: 100%; left: 0px}50%{width: 100%; right: 0px}52%{width: 100%; right: 0px}100%{width: 0px; right: 0px}}
+
+
+		@keyframes blinds {100% {background-position: 0 0, 0 -3em;background-size: 0 0, 1em 6em;}}
+
+		.floating { animation-name: floating;animation-duration: 2s;animation-iteration-count: infinite;animation-timing-function: ease-in-out; margin-left: 30px; margin-top: 5px;}
+
+		@keyframes floating {from { transform: translate(0,  0px); }65%  { transform: translate(0, 30px); }to   { transform: translate(0, -0px); } }
+
+
+		.loader1{position: relative;height: 80px;width: 80px;border-radius: 80px;border: 3px solid #88d6f3;top: 28%;top: -webkit-calc(50% - 43px);top: calc(50% - 43px);left: 35%;left: -webkit-calc(50% - 43px);left: calc(50% - 43px);-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;-webkit-animation: loader1 3s linear infinite;animation: loader1 3s linear infinite;}
+
+		.loader1:after{content: "";position: absolute;top: -5px;left: 20px;width: 11px;height: 11px;border-radius: 10px;background-color: #88d6f3;}
+
+		@-webkit-keyframes loader1{0%{-webkit-transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);}}
+
+		@keyframes loader1{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}
+
+
+
+
+
+
+	</style>
+</head>
+
+
+<body>
+	<script> console.log(66.66 + 16.66)</script>
+
+	<section class="b-white" style="padding-top:50px; padding-bottom:100px">
+		<div class="hero floating">
+			<img src="greenhouse.png" style="width: 90%; height: auto;">
+		</div>
+	</section>
+
+	<section class="b-white hero2" style="padding-bottom: 50px;">
+		<div>
+			<div class="top-1">
+				<img src="end.svg">
+			</div>
+			<div class="top-2" style="padding-top: 10px;">
+				<div class="top2-1"> <h1 style="color: #D3E0F0;">Science - Fiction Novel</h1>본 페이지는 책 내용을 바탕으로 재구성한 웹페이지입니다. </div>
+				<div class="top2-2 re" style="width:80%; margin-left: auto;"> 
+					<div class="ab mid" style="padding-bottom:35px; color: #5279BC;"><h2>김초엽, 2019,<br>자이언트북스</h2></div>
+					<div style="text-align: right;"><img src="about.svg"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-world">
+		<div class="hero3">
+			 <div class="re" style="text-align: center; padding-top: 290px; padding-bottom: 100px;">
+			 	<div class="ab mid"><h2 style="color: #DD4599; padding-top: 200px;">!<br>당신이 이 세계를 사랑하고 있다면...</h2></div>
+			 	<div><img src="talk.svg" style="width: 600px; height: auto;"></div>
+			</div>
+
+			<div style="overflow: hidden; text-align: center; padding-top: 20px;">
+			 		<div class="box mid"><div class="loader5"></div><p></p></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-map1 w-white">
+		<div class="hero3" style="padding-top:70px">
+		<div class="flex"><img src="sq.svg" style="width:30px; height:auto; margin-left: auto;"></div>
+			<div class="top-3">
+				<div class="top3-1">
+					<h3>2049년,<p>세계는<p>멸망했습니다.</h3>
+				</div>
+
+				<div class="top3-2">
+					<h1 style="padding-top: 30px; color: #DD4599">The Dust</h1>
+				</div>	
+
+				<div class="top3-3">
+					<img src="dust.svg">
+				</div>	
+
+				<div class="top3-4"></div>		
+			</div>
+			<div class="top-4" style="padding-top: 30px; padding-bottom: 80px;">
+				<div class="top4-1"><img src="po.svg" style="width:30px; padding-top: 140px"></div>
+				<div class="top4-2"><h2>한 실험실에서 누출된<br>인류 최악의 먼지</h2> <br> 예견된 멸망이었을까, 우연의 산물에 불과했을까? 미국의 한 연구실에서 다루던 더스트라는 물질은 한 연구원의 실수로 그만 온 세상을 향해 퍼져나가기 시작했습니다.</div>
+				<div class="top4-3"><h2>지구 곳곳에 세워진<br>거대한 유리벽</h2> <br> 더스트는 식물, 동물, 인간을 가리지 않고 모든 생명체를 죽여나가기 시작했습니다. 더스트를 세상 밖으로 퍼트린 회사는 책임을 통감하며 거대한 유리돔을 지어 인류를 더스트로부터 보호하기로 하였습니다.</div>
+				<div class="top4-4"><h2>내성종과 취약종<br>살아남은 자의 원죄</h2> <br> 그러나 모든 인간이 유리돔 안으로 들어갈 수는 없었습니다. 돔 밖에 남은 인류는 서로를 죽이거나, 혹은 함께 살아가며 목숨을 유지했습니다. 더스트 면역을 갖춘 내성종은 피를 노려져 더욱 살아남기 힘들었습니다. </div>
+				<div class="top4-5 flex"><img src="sq2.svg" style="width: 30px; padding-top: 220px; margin-left: auto;"></div>
+
+		</div>
+		</div>
+	</section>
+
+
+	<section class="bg-map2">
+		<div class="hero3" style="padding-top:70px; padding-bottom:20px">
+			<div class="flex"><img src="sq3.svg" style="width:30px; height:auto;"></div>
+			<div class="top-5" style="text-align: right;">
+				<div class="top5-1"></div>
+
+				<div class="top5-2"><img src="alive.svg"></div>	
+
+				<div class="top5-3"><h3>2129년,<p>이곳은 더스트<p>생태연구소입니다.</h3></div>	
+
+				<div class="top5-4"><h1 style="padding-top: 30px; color: #6C85AC">We Alive</h1></div>		
+			</div>
+			<div class="top-6" style="padding-top: 30px; padding-bottom: 80px;">
+				<div class="top4-1"><img src="sq4.svg" style="width: 30px; padding-top: 220px; margin-left: auto;"></div>
+				<div class="top4-2"><h2>어느순간 낮아진<br>더스트 농도</h2> <br> 우연의 산물일까, 누군가의 계획일까? 어느 순간부터 더스트 농도는 차차 낮아지기 시작했습니다. 더 이상 밖에서 사람들이 죽는 일은 없었으며, 돔 안의 사람들은 돔 밖으로 나오기 시작했습니다. </div>
+				<div class="top4-3"><h2>지구 전체를<br>덮어간 식물들</h2> <br> 모스바나를 비롯한 식물을 온 지구를 덮으며 끈질긴 생명력을 보여주었습니다. 더스트 농도는 인류가 살아갈 수 있을 정도로 충분히 낮아졌고, 세계는 재건되었습니다.</div>
+				<div class="top4-4"><h2>우리는<br>살아가고 있습니다</h2> <br> 그 모든 일을 겪었음에도 불구하고, 우리는 여전히 살아가고 있습니다. 누군가는 더스트가 그저 과거의 산물일 뿐 새로운 미래 에너지를 연구해야 하지 않겠냐는 주장을 펼칩니다. 그럼에도 불구하고 저는... ...</div>
+				<div class="top4-5 flex"><img src="po.svg" style="width:30px; padding-top: 140px; margin-left: auto;"></div>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="re"><img src="top.svg" class="ab" style="bottom: 0"></div>
+
+	<section class="bg-half">
+	  <div class="top-7 hero3" style="padding-top: 80px">
+	  	<div class="top7-1 re">
+	  		<div class="ab" style="padding-left: 160px; padding-top: 20px"><h3>2049, ???<br>멸망의 이야기</h3></div>
+	  		<img src="talk1.svg">
+	  	</div>
+	  
+	  	<div class="top7-2 re w-white" style="text-align: right;">
+			<div class="ab" style="padding-left: 120px; padding-top: 20px"><h3>2129, 서울<br>재건의 이야기</h3></div>
+	  		<img src="talk2.svg"></div>
+	  </div>
+
+	  <div class="top-8" style="padding-top:100px">
+	  	<div class="top8-1"><img src="pic1.png" width="100%"></div>
+	  	<div class="top8-2 w-white" style="padding-top:80px"><h2>그래,<br>안쪽으로 가보자.</h2> <br> 더스트가 휩쓸고 간 숲은 죽음 같은 적막으로 덮여있었다. 야생동물은 물론이고, 바닥을 기어다니는 벌레 한 마리 보이지 않았다. 수북히 쌓인 낙엽 더미에 발이 푹푹 빠져들었다. 땅 위로 드러난 거대한 나무뿌리에 걸려 넘어지지 않도록 나오미는 아래만 보고 걸었다. <br><img src="dot.svg" style="width:25%; padding-top: 98px"></div>
+	  	<div class="top8-3"></div>
+	  	<div class="top8-4" style="padding-top:80px; text-align: right;"><h2>과하게 증식했네요,<br>이상해요.</h2> <br> 다시 영상을 재생하자 의문의 덩굴식물과 관련된 보도가 이어지다가 화면이 전환되었다. 덩굴식물 때문에 도저히 발굴 작업을 지속할 수 없다는 해월 발굴 현장이었다. 홀로그램 스크린 속 카메라가 한 바퀴 회전하며 보여준 풍경은 꽤 놀라웠다. 모스바나가 야산을 가득 채우다시피 하고 있었다. <br><img src="dot2.svg" style="width:25%; padding-top: 70px"></div>
+	  	<div class="top8-5"><img src="pic2.png" width="100%"></div>
+	  </div>
+
+
+	  <div class="top-9 hero3" style="padding-top:150px">
+	  	<div class="top9-1"><img src="pic3.png"></div>
+	  	<div class="top9-2 w-white" style="padding-top:80px"><h2>나오미,<br>틀림없이 있어!</h2> <br> 여기에 도피처가 있을지도 모른다는 믿음, 그 미약한 가능성이 아미라를 이곳으로 이끌었다. 나오미도 이미 알고 있었다. <br><br> 완벽한 내성종이 아닌 언니가 지금까지 살아 있는 건 두 가지, 나오미 자신의 도움과 도피처에 대한 집착에 가까운 희망 때문이었다. <br><img src="dot.svg" style="width:25%; padding-top: 55px"></div>
+	  	<div class="top9-3"></div>
+	  	<div class="top9-4" style="padding-top:80px; text-align: right;"><h2>하필이면<br>해월시네요.</h2> <br> 해월은 대표적인 폐허 도시 중 하나였다. 한때 한국 최대 로봇 생산지였고, 분지 특성상 돔을 건설하기 수월해서 더스트 폴 직후 가장 먼저 대피용 돔 시티로 지정된 곳이기도 했다. <br><br>그러나 기계들의 집단 오류로 도시 전체가 폐허로 변한 이후에는 로봇들의 공동묘지가 되었다.<br><img src="dot2.svg" style="width:25%; padding-top: 55px"></div>
+	  	<div class="top9-5"><img src="pic4.png"></div>
+	  </div>
+
+	  <div class="top-10 hero3" style="padding-top:150px">
+	  	<div class="top10-1 w-white" style="padding-top:80px;"><h2>저길 봐, 언니<br>뭔가 있어.</h2> <br>짙게 내려앉은 어둠 사이, 숲 위쪽 먼 곳에 구체 모양의 따뜻한 빛이 보였다. 그게 정확히 무엇인지 알 수는 없었지만 아주 신비로워서 나오미는 환각을 보고 있는 것인지도 모른다고 생각했다. <br><Br>다른 내성종들이 말했던 대로 정말로 도피처가 있는 걸까? 이런 숲 한가운데에? <br><img src="dot.svg" style="width:25%; padding-top: 98px"></div>
+	  	<div class="top10-2"><img src="pic5.png"></div>
+	  	<div class="top10-3" style="padding-top:80px; text-align: right;"><h2>푸른빛을 내는<br>식물이라...</h2> <br> 그런데 아영은 좀처럼 모스바나와 그 푸른빛을 떨쳐낼 수 없었다. 단지 직원의 설명을 짧게 들었을 뿐인데도 마치 그 장면을 어디선가 목격한 것처럼 느껴졌다. <br><br>문득 며칠 전 꾸었던 꿈이 떠올랐다. 스트레인저 테일즈에서 이상한 이야기를 잔뜩 읽은 탓이라고 생각했는데, 갑자기 왜 그런 꿈을 꿨는지 알 것 같았다.<br><img src="dot2.svg" style="width:25%; padding-top: 55px"></div>
+	  </div>
+	</section>
+
+
+	<section class="bg-half" style="padding-top:80px;">
+
+			
+		<div class="re w-white">
+			<div class="top-11 ab hero3" style="padding-top:500px">
+				<div class="top11-1" style="padding-bottom: 30px; padding-left:10px"><h2>어둠 속에서 보이는 저 빛은<br>이 곳에서 삼을 수 있는 유일한 길잡이였다.</h2></div>
+				<div class="top11-2"></div>
+				<div class="top11-3" style="text-align: right; padding-top: 30px; padding-right: 10px"><h2>무성한 덩굴식물과 푸른빛,<br>아영은 분명 그런 것을 보았다. 어린 시절, 이희수의 정원에서였다.</h2></div>
+			</div>
+			
+			<div><img src="section.svg"></div>
+		</div>	
+	</section>
+
+
+
+	<section class="b-white hero3" style="border-radius: 20px; padding-top: 50px;">
+		<div style="text-align: center; padding-bottom: 50px"><img src="dot2.svg" width="60px"></div>
+	  <div class="top-12">
+	  	<div class="top12-2" style="text-align: right;"><h3>마침내 조우하는<br>과거와 현재</h3></div>
+	  	<div class="top12-3" style="padding-top:20px">나오미가 테이블 위에 올려둔 사진은, 언뜻 보았을 때는 그저 까맣게만 보였다. 그러나 자세히 보니 사진 한구석에 희미한 구형의 빛이 찍혀 있음을 알 수 있었다. <br><Br>“좋아요. 딱 한번만 더 이야기를 해볼게요. 어쩌면 당신이 말한 정원의 주인은 제가 아는 사람일지도 몰라요. 당신은 답을 아직 알지는 못하지만, 답을 찾기 위해 어디로 가야 하는지를 알지요. 그곳으로 가겠다는 생각도 있고요.” <br><Br>...나오미가 사진을 다시 뒤집었다. 그곳에는 날짜가 적혀 있었다.</div>
+	  </div>
+	</section>
+
+	<section style="padding-bottom:50px; padding-top:50px">
+	<div class="box mid" style="padding-top:100px"><div class="loader1"></div></div>
+	</section>	
+
+
+	<section class="hero3 bg-grid" style="padding-bottom:300px;">
+	 <div>
+	 	<img src="letter.png" style="width: 40%; height: auto; padding-top: 300px;">
+	 </div>
+	</section>
+
+
+	<section class="b-black hero3" style="padding-top:150px; padding-bottom:150px;">
+		<div class="re">
+			<div class="ab floating" style="z-index: 3;top: -60px; left: 800px;"><img src="book.png" style="width: 70%; height: auto; "></div>
+		</div>
+
+			<div class="top-13 w-white" style="padding: 30px; align-items: center; border-top: solid 2px white;">
+				<div class="top13-1"><h3>이 모든</h3></div>
+				<div class="top13-2">레이첼. 정말로 레이첼이 이 숲에만 어떤 마법을 적용한 걸까?</div>
+				<div class="top13-3"></div>
+			</div>
+
+			<div class="top-13 w-white" style="padding: 30px; align-items: center; border-top: solid 2px white;">
+				<div class="top13-1">내가 마음을 모두 주었던 이 프림 빌리지는 영원히 지속될 수 없는 것이었다.</div>
+				<div class="top13-2"><h3>이야기는</h3></div>
+				<div class="top13-3"></div>
+			</div>
+
+			<div class="top-13 w-white" style="padding: 30px; align-items: center; border-top: solid 2px white;">
+				<div class="top13-1"><h3>사랑에서</h3></div>
+				<div class="top13-2">식물들은 아주 잘 짜인 기계 같단다. 나도 예전에는 그걸 몰랐지.</div>
+				<div class="top13-3"></div>
+			</div>
+
+			<div class="top-13 w-white" style="padding: 30px; align-items: center; border-top: solid 2px white; border-bottom: solid 2px white;">
+				<div class="top13-1">무언가 잘못되었을 것이다. 발단은 무엇이든 될 수 있었다.</div>
+				<div class="top13-2"><h3>시작됐다</h3></div>
+				<div class="top13-3"></div>
+			</div>
+		</div>
+
+
+		<div class="flex re">
+			<ul class="desktop flex">
+				<div class="light-button button-wrapper">
+  					<div class="button"><span>책 보러가기</span></div>
+  				</div>
+
+  				<div class="light-button button-wrapper">
+  					<div class="button"><span>맨 위로</span></div>
+  				</div>
+		</div>
+
+	</section>
+
+	<section class="bg-gr" style="padding-top:20px; padding-bottom:20px; border-top: solid 3px white; border-bottom: solid 3px white;">
+		<div>
+			<MARQUEE behavior="scroll"><h1 style="font-size: 5em;">At The End Of The World At The End Of The World At The End Of The World</h1></MARQUEE>
+		</div>
+	</section>
+
+	<footer class="b-black hero3" style="padding-top:20px; padding-bottom:20px">
+		<div class="flex w-white" style="justify-content: space-between;">
+			<div><img src="sq4.svg" style="width:20px; height: auto;"></div>
+			<div>지구 끝의 온실</div>
+			<div>Copyright 2022 All Rights Reserved</div>
+			<div>Greenhouse, At The End of the World</div>
+			<div><img src="sq2.svg" style="width:20px; height: auto;"></div>
+			
+		</div>
+
+	</footer>
+
+</body>
